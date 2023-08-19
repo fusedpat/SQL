@@ -1,0 +1,52 @@
+Do a practice test for https://www.w3schools.com/quiztest/quiztest.asp?qtest=SQL
+
+
+•	Write a SQL query to retrieve all columns from the Customers table.
+
+•	Write a SQL query to retrieve the ProductNames of all products from the Products table.
+
+•	Write a SQL query to retrieve the unique countries from the Suppliers table.
+
+•	Write a SQL query to retrieve the OrderID, CustomerID, and order date from the Orders table.
+
+•	Write a SQL query to retrieve the CategoryName and their corresponding description from the Categories table.
+
+•	Write a SQL query to retrieve the employeeID, firstname, lastname, and Notes from the Employees table.
+
+•	Write a SQL query to retrieve all customers whose CustomerName starts with 'A' and are from the 'USA'.
+
+•	Write a SQL query to retrieve all customers who are not from the 'USA' from the Customers table.
+
+•	Write a SQL query to retrieve all products whose price is between $10 and $50.
+
+•	Write a SQL query to retrieve all customers who are from either 'USA' or 'UK'.
+
+•	Write a SQL query to retrieve all products whose name contains the word 'Hot'.
+
+•	Write a SQL query to retrieve all suppliers whose SupplierName starts with 'E' or ends with 'x'.
+
+•	Write a SQL query to retrieve all OrderDetails with a total amount greater than $100.
+
+•	Write a SQL query to retrieve all customers whose city is not 'London'.
+
+•	Write a SQL query to retrieve the minimum and maximum prices of products.
+
+•	Write a SQL query to retrieve all products with distinct product names.
+
+•	Write a SQL query to retrieve the product name and price, and alias the price as "UnitPrice" from the Products table.
+
+•	Write a SQL query to retrieve all products whose price is not between $10 and $50 from the Products table.
+
+•	Write a SQL query to retrieve all orders with a non-null value in the order_date column from the Orders table.
+
+Joins:
+
+Write a SQL query to retrieve the product name, unit price, and supplier name for all products from the Products table, joined with the Suppliers table.
+
+Write a SQL query to retrieve the customer name, order date, and total amount for all orders from the Customers table, joined with the Orders table.
+
+Write a SQL query to retrieve the employee ID, first name, last name, and manager name for all employees from the Employees table, joined with itself (self-join).
+
+Write a SQL query to retrieve the product name, unit price, and category name for all products from the Products table, joined with the Categories table.
+
+
