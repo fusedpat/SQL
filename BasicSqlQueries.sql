@@ -11,6 +11,7 @@ SELECT * FROM Products WHERE Price >= 30;
 SELECT * FROM Products WHERE Price <= 30;
 SELECT * FROM Products WHERE Price <> 18;--Some servers has different like !=
 SELECT * FROM Products WHERE Price BETWEEN 50 AND 60;
+SELECT * FROM Products WHERE Price not BETWEEN 50 AND 60;
 SELECT * FROM Customers WHERE City LIKE 's%';
 SELECT * FROM products WHERE productname LIKE '%Bob''s%';
 SELECT * FROM Customers WHERE City IN ('Paris','London');
