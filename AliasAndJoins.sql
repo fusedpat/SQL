@@ -1,3 +1,5 @@
+--CRUD : Create Read update Delete
+
 -- Alias
 SELECT CustomerID AS ID, CustomerName AS Customer
 FROM Customers;
