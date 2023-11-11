@@ -4,6 +4,7 @@ SELECT Country FROM Customers;
 SELECT DISTINCT Country FROM Customers;
 SELECT * FROM Customers WHERE Country='Mexico';
 SELECT * FROM Customers WHERE CustomerID=1;
+select * from orders where orderDate = #7/4/1996#
 SELECT * FROM Products WHERE Price = 18;
 SELECT * FROM Products WHERE Price > 30;
 SELECT * FROM Products WHERE Price < 30;
@@ -12,6 +13,7 @@ SELECT * FROM Products WHERE Price <= 30;
 SELECT * FROM Products WHERE Price <> 18;--Some servers has different like !=
 SELECT * FROM Products WHERE Price BETWEEN 50 AND 60;
 SELECT * FROM Products WHERE Price not BETWEEN 50 AND 60;
+SELECT * FROM Orders WHERE OrderDate BETWEEN #07/01/1996# AND #07/31/1996#;
 SELECT * FROM Customers WHERE City LIKE 's%';
 SELECT * FROM products WHERE productname LIKE '%Bob''s%';
 SELECT * FROM Customers WHERE City IN ('Paris','London');
