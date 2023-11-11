@@ -14,6 +14,11 @@ SELECT * FROM Products WHERE Price <> 18;--Some servers has different like !=
 SELECT * FROM Products WHERE Price BETWEEN 50 AND 60;
 SELECT * FROM Products WHERE Price not BETWEEN 50 AND 60;
 SELECT * FROM Orders WHERE OrderDate BETWEEN #07/01/1996# AND #07/31/1996#;
+/*
+In SQL Server, you typically use single quotes: '1996-07-04'.
+In MySQL, you also use single quotes: '1996-07-04'.
+In PostgreSQL, you use single quotes: '1996-07-04'.
+*/
 SELECT * FROM Customers WHERE City LIKE 's%';
 SELECT * FROM products WHERE productname LIKE '%Bob''s%';
 SELECT * FROM Customers WHERE City IN ('Paris','London');
