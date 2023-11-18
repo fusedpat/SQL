@@ -36,7 +36,7 @@ VALUES
     (102, 1, 'Checking', 1000.00),
     (103, 2, 'Savings', 7500.00),
     (104, 3, 'Checking', 3000.00);
-INSERT INTO Transactions (Transactions_id, account_id, Transactions_type, amount, Transactions_date)
+INSERT INTO Transactionss (Transactions_id, account_id, Transactions_type, amount, Transactions_date)
 VALUES
     (1001, 101, 'Deposit', 1000.00, '2023-11-17 09:00:00'),
     (1002, 102, 'Withdrawal', 500.00, '2023-11-17 09:30:00'),
