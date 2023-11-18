@@ -1,0 +1,81 @@
+--https://www.db-fiddle.com/
+--
+
+CREATE TABLE Customer (
+    customer_id INT PRIMARY KEY,
+    first_name VARCHAR(50),
+    last_name VARCHAR(50),
+    address VARCHAR(100),
+    email VARCHAR(100),
+    phone_number VARCHAR(20)
+);
+CREATE TABLE Account (
+    account_id INT PRIMARY KEY,
+    customer_id INT,
+    account_type VARCHAR(20),
+    balance DECIMAL(10, 2),
+    FOREIGN KEY (customer_id) REFERENCES Customer(customer_id)
+);
+
+CREATE TABLE Transactionss (
+    Transactions_id INT PRIMARY KEY,
+    account_id INT,
+    Transactions_type VARCHAR(20),
+    amount DECIMAL(10, 2),
+    Transactions_date TIMESTAMP,
+    FOREIGN KEY (account_id) REFERENCES Account(account_id)
+);
+INSERT INTO Customer (customer_id, first_name, last_name, address, email, phone_number)
+VALUES
+    (1, 'John', 'Doe', '123 Main St', 'john.doe@example.com', '555-1234'),
+    (2, 'Jane', 'Smith', '456 Oak St', 'jane.smith@example.com', '555-5678'),
+    (3, 'Bob', 'Johnson', '789 Pine St', 'bob.johnson@example.com', '555-9876');
+INSERT INTO Account (account_id, customer_id, account_type, balance)
+VALUES
+    (101, 1, 'Savings', 5000.00),
+    (102, 1, 'Checking', 1000.00),
+    (103, 2, 'Savings', 7500.00),
+    (104, 3, 'Checking', 3000.00);
+INSERT INTO Transactions (Transactions_id, account_id, Transactions_type, amount, Transactions_date)
+VALUES
+    (1001, 101, 'Deposit', 1000.00, '2023-11-17 09:00:00'),
+    (1002, 102, 'Withdrawal', 500.00, '2023-11-17 09:30:00'),
+    (1003, 103, 'Deposit', 2000.00, '2023-11-17 10:00:00'),
+    (1004, 104, 'Withdrawal', 1000.00, '2023-11-17 11:00:00');
+
+/*
+Inner join : Retrieve a list of customers and their corresponding account information for those who have made Transactionss.
+*/
+SELECT Customer.customer_id, Customer.first_name, Customer.last_name, Account.account_id, Account.account_type, Transactions.Transactions_id
+FROM Customer
+INNER JOIN Account ON Customer.customer_id = Account.customer_id
+INNER JOIN Transactions ON Account.account_id = Transactions.account_id;
+
+--Left join : Retrieve a list of all customers and their account information, along with Transactions details if available.
+
+SELECT Customer.customer_id, Customer.first_name, Customer.last_name, Account.account_id, Account.account_type, Transactions.Transactions_id
+FROM Customer
+LEFT JOIN Account ON Customer.customer_id = Account.customer_id
+LEFT JOIN Transactions ON Account.account_id = Transactions.account_id;
+
+-- Right join : Retrieve a list of all Transactionss and their corresponding account information, including customer details if available.
+SELECT Transactions.Transactions_id, Transactions.Transactions_type, Transactions.amount, Account.account_id, Account.account_type, Customer.customer_id
+FROM Transactions
+RIGHT JOIN Account ON Transactions.account_id = Account.account_id
+RIGHT JOIN Customer ON Account.customer_id = Customer.customer_id;
+
+-- Full jon:  Retrieve a list of all customers and their account information, along with Transactions details if available. Include unmatched records from both sides.
+
+SELECT Customer.customer_id, Customer.first_name, Customer.last_name, Account.account_id, Account.account_type, Transactions.Transactions_id
+FROM Customer
+FULL JOIN Account ON Customer.customer_id = Account.customer_id
+FULL JOIN Transactions ON Account.account_id = Transactions.account_id;
+
+-- Self join  : Find all customers who share the same address.
+
+SELECT c1.customer_id AS customer1_id, c1.first_name AS customer1_first_name, c1.last_name AS customer1_last_name,
+       c2.customer_id AS customer2_id, c2.first_name AS customer2_first_name, c2.last_name AS customer2_last_name
+FROM Customer c1
+INNER JOIN Customer c2 ON c1.address = c2.address AND c1.customer_id < c2.customer_id;
+
+
