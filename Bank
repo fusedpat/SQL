@@ -40,9 +40,17 @@ INSERT INTO Transactions (Transactions_id, account_id, Transactions_type, amount
 VALUES
     (1001, 101, 'Deposit', 1000.00, '2023-11-17 09:00:00'),
     (1002, 102, 'Withdrawal', 500.00, '2023-11-17 09:30:00'),
+    (1003, 103, 'Deposit', 2000.00, '2023-11-17 10:00:00');
+
+
+/*
+INSERT INTO Transactions (Transactions_id, account_id, Transactions_type, amount, Transactions_date)
+VALUES
+    (1001, 101, 'Deposit', 1000.00, '2023-11-17 09:00:00'),
+    (1002, 102, 'Withdrawal', 500.00, '2023-11-17 09:30:00'),
     (1003, 103, 'Deposit', 2000.00, '2023-11-17 10:00:00'),
     (1004, 104, 'Withdrawal', 1000.00, '2023-11-17 11:00:00');
-
+*/
 /*
 Inner join : Retrieve a list of customers and their corresponding account information for those who have made Transactionss.
 */
