@@ -43,7 +43,7 @@ Joins:
 
 Write a SQL query to retrieve the product name, unit price, and supplier name for all products from the Products table, joined with the Suppliers table.
 
-Write a SQL query to retrieve the customer name, order date, and total amount for all orders from the Customers table, joined with the Orders table.
+Write a SQL query to retrieve the customer name, order date, and total amount for all orders from the Customers table,Orders table and order details table.
 
 Write a SQL query to retrieve the employee ID, first name, last name, and manager name for all employees from the Employees table, joined with itself (self-join).
 
